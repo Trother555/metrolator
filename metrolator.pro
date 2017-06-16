@@ -26,15 +26,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    Modbus/modbus.cpp \
     device.cpp \
-    deviceview.cpp
+    deviceview.cpp \
+    Modbus/modbus_general.cpp \
+    modbus_device.cpp
 
 HEADERS += \
         mainwindow.h \
-    Modbus/modbus.h \
     device.h \
-    deviceview.h
+    deviceview.h \
+    Modbus/modbus_general.h \
+    modbus_device.h
 
 FORMS += \
         mainwindow.ui

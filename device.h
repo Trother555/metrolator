@@ -1,5 +1,11 @@
 #ifndef DEVICE_H
 #define DEVICE_H
+#include <QString>
+#include "modbus_device.h"
+
+/*
+    Этот класс реализует логику счётчика
+*/
 
 enum DeviceState
 {
@@ -13,25 +19,39 @@ enum DeviceRegime
     METROLOGICAL
 };
 
-struct DeviceConfiguration
+enum AffectType
 {
-    DeviceState state;
-    DeviceRegime regime;
+    CRACK = 0,
+    REVERSE_STREAM,
+    STRONG_MAGNET,
+    MAGNET_BUTTON
 };
+
 
 class Device
 {
+    //Внутренняя память счётчика
+    primary_table_s memory;
+
+    //Индикатор состояния
     DeviceState state = NORMAL;
-    DeviceRegime regime = TECHNOLOGICAL;
 public:
     Device();
-    Device(DeviceConfiguration);
+    //Device(DeviceConfiguration); //Нужен метод для восстановления предыдущего состоянеия
+
     //Внутри этой функции эмулируется работа счётчика:
     //Происходит обработка входящих сообщений
     //Отправка сообщений
     //Запись в регистры
     //другое...
-    Run();
+    void Run();
+
+    //Послать счётчику сообщение по протоколу Modbus
+    QString SendMessage(QString msg);
+
+    //Эта функция эмулирует внешнее воздействие на счётчик
+    void Affect(AffectType);
+
 };
 
 #endif // DEVICE_H

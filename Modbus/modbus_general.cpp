@@ -1,4 +1,4 @@
-#include "modbus.h"
+#include "modbus_general.h"
 #include "string.h"
 #include <stdio.h>
 #include <stdlib.h>

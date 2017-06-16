@@ -39,8 +39,42 @@
          <property name="title">
           <string>Общее состояние</string>
          </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="openButton">
+            <property name="text">
+             <string>Вскрыть</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="reverseButton">
+            <property name="text">
+             <string>Обратный ток</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="strongMagButton">
+            <property name="text">
+             <string>Намагнитить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="magniteButton">
+            <property name="text">
+             <string>Магнитная кнопка</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
          <zorder>groupBox_5</zorder>
          <zorder>groupBox_5</zorder>
+         <zorder>magniteButton</zorder>
+         <zorder>reverseButton</zorder>
+         <zorder>strongMagButton</zorder>
+         <zorder>openButton</zorder>
         </widget>
        </item>
       </layout>
@@ -73,36 +107,7 @@
           <attribute name="title">
            <string>Tab 1</string>
           </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
-           <item>
-            <widget class="QPushButton" name="openButton">
-             <property name="text">
-              <string>Вскрыть</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="reverseButton">
-             <property name="text">
-              <string>Обратный ток</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="strongMagButton">
-             <property name="text">
-              <string>Намагнитить</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="magniteButton">
-             <property name="text">
-              <string>Магнитная кнопка</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <layout class="QVBoxLayout" name="verticalLayout_3"/>
          </widget>
          <widget class="QWidget" name="tab_2">
           <attribute name="title">

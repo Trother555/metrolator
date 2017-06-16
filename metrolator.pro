@@ -27,16 +27,16 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     device.cpp \
-    deviceview.cpp \
     Modbus/modbus_general.cpp \
-    modbus_device.cpp
+    modbus_device.cpp \
+    device_view.cpp
 
 HEADERS += \
         mainwindow.h \
     device.h \
-    deviceview.h \
     Modbus/modbus_general.h \
-    modbus_device.h
+    modbus_device.h \
+    device_view.h
 
 FORMS += \
         mainwindow.ui
